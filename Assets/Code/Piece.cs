@@ -2,5 +2,5 @@
 
 public class Piece : MonoBehaviour
 {
-	public int weigth;	
+	public int Weight;	
 }
