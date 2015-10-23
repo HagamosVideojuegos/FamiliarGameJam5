@@ -3,8 +3,7 @@
 public class InputManager : Singleton<MonoBehaviour>
 {
 	#region Events
-	public static event MoveRight OnMoveLeft;
-	public static event MoveLeft OnMoveRight;
+	public static event Move OnMove;
 	public static event Jump OnJump;
 	public static event PieceOut OnPieceOut;
 	public static event PieceIn OnPieceIn;
@@ -12,8 +11,7 @@ public class InputManager : Singleton<MonoBehaviour>
 	#endregion
 	
 	#region Delegates
-	public delegate void MoveRight();
-	public delegate void MoveLeft();
+	public delegate void Move(float direction);
 	public delegate void Jump();
 	public delegate void PieceOut(Piece piece);
 	public delegate void PieceIn(Piece piece);
@@ -23,23 +21,8 @@ public class InputManager : Singleton<MonoBehaviour>
 	private Ray pulse;
  	private RaycastHit colision;
 	
-	void LateUpdate ()
-	{
-		if(Input.GetAxis("Horizontal") == 1)
-		{
-			if(OnMoveRight != null)
-				OnMoveRight();
-		}
-		else if(Input.GetAxis("Horizontal") == -1)
-		{
-			if(OnMoveLeft != null)
-				OnMoveLeft();
-		}
-		
-		if (Input.GetButtonDown("Jump"))
-			if(OnJump != null)
-				OnJump();
-				
+	void Update ()
+	{		
 		if(Input.GetMouseButton(0))
 		{	
 			pulse=Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -55,5 +38,15 @@ public class InputManager : Singleton<MonoBehaviour>
 					OnInteract(interactable);
 			}
 		}
+	}
+	
+	void FixedUpdate()
+	{
+		if(OnMove != null)
+			OnMove(Input.GetAxisRaw("Horizontal"));
+		
+		if (Input.GetButtonDown("Jump"))
+			if(OnJump != null)
+				OnJump();
 	}
 }
