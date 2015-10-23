@@ -8,7 +8,7 @@ public class InputManager : Singleton<MonoBehaviour>
 	public static event Jump OnJump;
 	public static event PieceOut OnPieceOut;
 	public static event PieceIn OnPieceIn;
-	public static event BoxAttach OnBoxAttach;
+	public static event Interact OnInteract;
 	#endregion
 	
 	#region Delegates
@@ -17,10 +17,10 @@ public class InputManager : Singleton<MonoBehaviour>
 	public delegate void Jump();
 	public delegate void PieceOut(Piece piece);
 	public delegate void PieceIn(Piece piece);
-	public delegate void BoxAttach(Box box);
+	public delegate void Interact(InteractableObject interactableObject);
 	#endregion
 	
-	private Ray pulsacion;
+	private Ray pulse;
  	private RaycastHit colision;
 	
 	void LateUpdate ()
@@ -41,16 +41,18 @@ public class InputManager : Singleton<MonoBehaviour>
 				OnJump();
 				
 		if(Input.GetMouseButton(0))
-		{
-			var pulse = new Ray();
-			var colision = new RaycastHit();
-			
+		{	
 			pulse=Camera.main.ScreenPointToRay(Input.mousePosition);
 			if(Physics.Raycast(pulse,out colision))
 			{
 				var piece = colision.collider.gameObject.GetComponent<Piece>();
-				 if(piece && piece.tag.Equals("Player") && OnPieceOut != null)
+				var interactable = colision.collider.gameObject.GetComponent<InteractableObject>();
+				
+				if(piece && piece.tag.Equals("Player") && OnPieceOut != null)
 					OnPieceOut(piece);
+					
+				if(interactable && OnInteract != null)
+					OnInteract(interactable);
 			}
 		}
 	}
