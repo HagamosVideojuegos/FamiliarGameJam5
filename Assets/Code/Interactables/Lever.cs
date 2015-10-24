@@ -8,12 +8,10 @@ public class Lever : InteractableObjectCollider
     protected override void Interact()
     {
         if(GameManager.Instance.player.pieces.arms > 0)
+        {
             GameManager.Instance.player.OnLeverUse(this);
-    }
-    
-    public void UserLever()
-    {
-        if(OnActivate != null)
-            OnActivate(this);
+            if(OnActivate != null)
+                OnActivate(this);
+        }
     }
 }

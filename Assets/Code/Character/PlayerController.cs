@@ -87,15 +87,6 @@ public class PlayerController : MonoBehaviour
 	public void OnLeverUse(Lever lever)
 	{
 		animator.SetTrigger("useLever");
-		interacting = true;
-		InputManager.OnMove -= HandleMove;
-		lever.Invoke("UserLever", 0.7f);
-	}
-	
-	public void OnLeverExit()
-	{
-		interacting = false;
-		InputManager.OnMove += HandleMove;
 	}
 	
 	void Awake ()
