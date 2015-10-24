@@ -11,7 +11,7 @@ public class Laser : MonoBehaviour
 		sprite = GetComponent<SpriteRenderer>();
 	}
 	
-	void OnTriggerEnter2D(Collider2D collider)
+	void OnTriggerStay2D(Collider2D collider)
 	{
 		if (sprite.enabled && collider.gameObject == GameManager.Instance.player.gameObject)
 			GameManager.Instance.player.Die();
