@@ -11,7 +11,7 @@ public abstract class InteractableObjectTrigger : InteractableObject
 		}
 	}
 	
-	void OnTriggerExit2D(Collision2D collider)
+	void OnTriggerExit2D(Collider2D collider)
 	{
 		if(collider.gameObject.tag.Equals("Player"))
 		{
