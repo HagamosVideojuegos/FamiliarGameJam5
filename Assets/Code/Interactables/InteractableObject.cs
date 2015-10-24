@@ -2,14 +2,16 @@
 
 public abstract class InteractableObject : MonoBehaviour
 {
-	public MonoBehaviour uiInteractable;
+	[SerializeField]
 	public bool isInteractable
 	{
 		get
 		{
-			return _interactable;	
+			return (transform.parent == null) ? _interactable : true;	
 		}
 	}
+	
+	public MonoBehaviour uiInteractable;
 	
 	private bool _interactable;
 	void Awake()
@@ -31,7 +33,25 @@ public abstract class InteractableObject : MonoBehaviour
 		}
 	}
 	
-	void OnCollisionExit2D(Collision2D collider)
+	void OnCollisionExit2D(Collider2D collider)
+	{
+		if(collider.tag.Equals("Player"))
+		{
+			_interactable = false;
+			uiInteractable.enabled = false;
+		}
+	}
+	
+	void OnTriggerEnter2D(Collider2D collider)
+	{
+		if(collider.tag.Equals("Player"))
+		{
+			_interactable = true;
+			uiInteractable.enabled = true;
+		}
+	}
+	
+	void OnTriggerExit2D(Collision2D collider)
 	{
 		if(collider.gameObject.tag.Equals("Player"))
 		{

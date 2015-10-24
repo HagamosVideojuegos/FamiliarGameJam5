@@ -2,6 +2,20 @@
 {
     protected override void Interact()
     {
-        //TODO: Implement
+        if(isInteractable)
+        {
+            if (transform.parent == null)
+            {
+                transform.parent = GameManager.Instance.player.transform;
+            } else {
+                transform.parent = null;
+            }
+        }
     }
+    /*
+    protected override void UnInteract()
+    {
+        transform.parent = null;
+    }
+    */
 }
