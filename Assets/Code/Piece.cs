@@ -1,24 +1,7 @@
-﻿using System;
-
-public class Piece : InteractableObject
+﻿public class Piece : InteractableObjectTrigger
 {
 	public bool mounted;
 	public int Weight;
-	
-	void Awake()
-	{
-		InputManager.OnPieceSelected += HandleOnPieceSelected;
-	}
-	
-	void OnDestroy ()
-	{
-		InputManager.OnPieceSelected -= HandleOnPieceSelected;
-	}
-	
-	void HandleOnPieceSelected(Piece piece)
-	{
-		//TODO: brightness
-	}
 
     protected override void Interact()
     {

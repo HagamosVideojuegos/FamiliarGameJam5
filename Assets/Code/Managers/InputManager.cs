@@ -7,7 +7,6 @@ public class InputManager : Singleton<InputManager>
 	public static event Jump OnJump;
 	public static event PieceOut OnPieceOut;
 	public static event PieceIn OnPieceIn;
-	public static event PieceIn OnPieceSelected;
 	public static event Interact OnInteract;
 	public static event Interact OnInteractableSelected;
 	#endregion
@@ -17,7 +16,6 @@ public class InputManager : Singleton<InputManager>
 	public delegate void Jump();
 	public delegate void PieceOut(Piece piece);
 	public delegate void PieceIn(Piece piece);
-	public delegate void PieceSelected(Piece piece);
 	public delegate void Interact(InteractableObject interactableObject);
 	public delegate void InteractableSelected(InteractableObject interactableObject);
 	#endregion
@@ -42,9 +40,6 @@ public class InputManager : Singleton<InputManager>
 				if(interactable && OnInteract != null)
 					OnInteract(interactable);
 			} else {
-				if(piece && OnPieceSelected != null)
-					OnPieceSelected(piece);	
-					
 				if(interactable && OnInteractableSelected != null)
 					OnInteractableSelected(interactable);
 			}
