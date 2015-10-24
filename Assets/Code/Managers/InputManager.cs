@@ -6,14 +6,12 @@ public class InputManager : Singleton<InputManager>
 	public static event Move OnMove;
 	public static event Jump OnJump;
 	public static event Interact OnInteract;
-	public static event Interact OnInteractableSelected;
 	#endregion
 	
 	#region Delegates
 	public delegate void Move(float direction);
 	public delegate void Jump();
 	public delegate void Interact(InteractableObject interactableObject);
-	public delegate void InteractableSelected(InteractableObject interactableObject);
 	#endregion
 	
 	private Ray2D pulse;
@@ -32,9 +30,6 @@ public class InputManager : Singleton<InputManager>
 				Debug.Log(interactable.name);
 				if(interactable && OnInteract != null)
 					OnInteract(interactable);
-			} else {
-				if(interactable && OnInteractableSelected != null)
-					OnInteractableSelected(interactable);
 			}
 		}
 	}
