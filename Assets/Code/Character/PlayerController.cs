@@ -96,10 +96,10 @@ public class PlayerController : MonoBehaviour
 		
 		if(direction != 0)
 		{
-			transform.localScale = new Vector3(Mathf.Sign(direction) * ((canJump) ? 1f : MoveOnAirForce), 1f, 1f);
+			transform.localScale = new Vector3(1f * Mathf.Sign(direction), 1f, 1f);
 			animator.SetBool("walkRight", (direction > 0) ? true : false);
 		}
-		rigidBody.velocity = new Vector2(direction * MoveForce, rigidBody.velocity.y);
+		rigidBody.velocity = new Vector2(direction *  ((canJump) ? MoveForce : MoveOnAirForce), rigidBody.velocity.y);
 	}
 	
 	private void HandleJump()
@@ -120,24 +120,24 @@ public class PlayerController : MonoBehaviour
 			switch(pieces.arms)
 			{
 				case 0:
-				//TODO: Activate right arm
+				pieces.RightArm.SetActive(true);
 				break;
 				case 1:
-				//TODO: Activate left arm
+				pieces.LeftArm.SetActive(true);
 				break;
 			}
 			break;
 			case Piece.PieceType.Head:
-			//TODO: Activate head
+			pieces.Head.SetActive(true);
 			break;
 			case Piece.PieceType.Leg:
 			switch(pieces.arms)
 			{
 				case 0:
-				//TODO: Activate right leg
+				pieces.RightLeg.SetActive(true);
 				break;
 				case 1:
-				//TODO: Activate left leg
+				pieces.LeftLeg.SetActive(true);
 				break;
 			}
 			break;
@@ -146,6 +146,33 @@ public class PlayerController : MonoBehaviour
 	
 	private void HandlePieceOut(Piece piece)
 	{
-		
+		switch(piece.pieceType)
+		{
+			case Piece.PieceType.Arm:
+			switch(pieces.arms)
+			{
+				case 1:
+				pieces.RightArm.SetActive(false);
+				break;
+				case 2:
+				pieces.LeftArm.SetActive(false);
+				break;
+			}
+			break;
+			case Piece.PieceType.Head:
+			pieces.Head.SetActive(false);
+			break;
+			case Piece.PieceType.Leg:
+			switch(pieces.arms)
+			{
+				case 1:
+				pieces.RightLeg.SetActive(false);
+				break;
+				case 2:
+				pieces.LeftLeg.SetActive(false);
+				break;
+			}
+			break;
+		}
 	}
 }

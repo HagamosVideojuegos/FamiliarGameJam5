@@ -728,8 +728,6 @@ GameObject:
   - 92: {fileID: 9274724}
   - 124: {fileID: 12435710}
   - 81: {fileID: 8178824}
-  - 114: {fileID: 11479820}
-  - 114: {fileID: 11488210}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1481,7 +1479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveForce: 4
-  MoveOnAirForce: 0
+  MoveOnAirForce: 1
   JumpForce: 5
   pieces:
     LeftLeg: {fileID: 184194}
@@ -1490,29 +1488,6 @@ MonoBehaviour:
     RightArm: {fileID: 135496}
     Head: {fileID: 194544}
   Weight: 0
---- !u!114 &11479820
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 195452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db4896c601612405db6b1c215c005226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11488210
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 195452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8e45370e7f0a42c39a5ec4327f843b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 11435062}
 --- !u!124 &12435710
 Behaviour:
   m_ObjectHideFlags: 1
