@@ -1,15 +1,28 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
+	[Serializable]
+	public class Pieces
+	{
+		public int legs;
+		public int arms;
+		public bool head;
+		public bool body;
+	}
+	
 	public float MoveForce;
 	public float JumpForce;
+	
+	public Pieces pieces;
 	
 	[HideInInspector]
 	public int Weight;
 	
 	private Rigidbody2D rigidBody;
+	private Animator animator;
 	private bool canJump;
 	
 	void Awake ()
@@ -20,6 +33,7 @@ public class PlayerController : MonoBehaviour
 		InputManager.OnPieceOut += HandlePieceOut;
 		
 		rigidBody = GetComponent<Rigidbody2D>();
+		animator = GetComponentInChildren<Animator>();
 		GameManager.Instance.player = this;
 	}
 	
@@ -41,12 +55,15 @@ public class PlayerController : MonoBehaviour
 	
 	private void HandleMove(float direction)
 	{
-		if(direction == 0)
+		if (pieces.legs == 0)
+			return;
+		
+		animator.SetFloat("speed", Mathf.Abs(direction));
+		
+		if(direction != 0)
 		{
-			//TODO: Trigger stay
-		} else {
-			transform.localScale = Vector3.one * direction;
-			//TODO: Trigger move
+			transform.localScale = new Vector3(1f * Mathf.Sign(direction), 1f, 1f);
+			animator.SetBool("walkRight", (direction > 0) ? true : false);
 		}
 		rigidBody.velocity = new Vector2(direction * MoveForce, rigidBody.velocity.y);
 	}
