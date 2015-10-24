@@ -4,13 +4,13 @@ public class Box : InteractableObjectCollider
 {
     public int Weight;
     
-    private Rigidbody2D rigidBody;
+    //private Rigidbody2D rigidBody;
     private Transform transformParent;
     
     protected override void Awake()
     {
         base.Awake();
-        rigidBody = GetComponent<Rigidbody2D>();
+        //rigidBody = GetComponent<Rigidbody2D>();
         transformParent = transform.parent;
     }
     
@@ -22,11 +22,11 @@ public class Box : InteractableObjectCollider
             if (GameManager.Instance.player.interacting)
             {
                 transform.parent = GameManager.Instance.player.transform;
-                Destroy(rigidBody);
+                //Destroy(rigidBody);
             } else {
                 transform.parent = transformParent;
-                rigidBody = gameObject.AddComponent<Rigidbody2D>();
-                rigidBody.isKinematic = true;
+                //rigidBody = gameObject.AddComponent<Rigidbody2D>();
+                //rigidBody.isKinematic = true;
             }
         }
     }
