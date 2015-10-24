@@ -3,6 +3,7 @@
 public class Door : MonoBehaviour
 {
 	public Button buttonAsociated;
+	public Lever leverAsicoated;
 	public Vector3 movementToOpen;
 	public float time;
 	public LeanTweenType openCloseEffect;
@@ -11,8 +12,16 @@ public class Door : MonoBehaviour
 	
 	void Awake()
 	{
-		Button.OnActivate += HandleOnActivate;
-		Button.OnDeactivate += HandleOnDectivate;
+		if(buttonAsociated)
+		{
+			Button.OnActivate += HandleOnActivate;
+			Button.OnDeactivate += HandleOnDectivate;
+		}
+		
+		if(leverAsicoated)
+		{
+			Lever.OnActivate += HandleOnActivate;
+		}
 		initialPosition = transform.localPosition;
 	}
 	
@@ -24,15 +33,31 @@ public class Door : MonoBehaviour
 	
 	private void HandleOnActivate(Button button)
 	{
-		LeanTween.cancel(gameObject);
-		LeanTween.moveLocal(gameObject, movementToOpen, time).setEase( openCloseEffect );
-		//TODO: SFX Open
+		if(button == buttonAsociated)
+		{
+			LeanTween.cancel(gameObject);
+			LeanTween.moveLocal(gameObject, movementToOpen, time).setEase( openCloseEffect );
+			//TODO: SFX Open
+		}
+	}
+	
+	private void HandleOnActivate(Lever lever)
+	{
+		if(lever == leverAsicoated)
+		{
+			LeanTween.cancel(gameObject);
+			LeanTween.moveLocal(gameObject, movementToOpen, time).setEase( openCloseEffect );
+			//TODO: SFX Open
+		}
 	}
 	
 	private void HandleOnDectivate(Button button)
 	{
-		LeanTween.cancel(gameObject);
-		LeanTween.moveLocal(gameObject, initialPosition, time).setEase( openCloseEffect );
-		//TODO: SFX Close 
+		if(button == buttonAsociated)
+		{
+			LeanTween.cancel(gameObject);
+			LeanTween.moveLocal(gameObject, initialPosition, time).setEase( openCloseEffect );
+			//TODO: SFX Close
+		} 
 	}
 }
