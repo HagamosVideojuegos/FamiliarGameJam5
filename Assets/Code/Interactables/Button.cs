@@ -55,6 +55,8 @@ public class Button : MonoBehaviour
 			return;
 		}
 		
+		currentWeight = Mathf.Clamp(currentWeight, 0, int.MaxValue);
+		
 		if(Activated && currentWeight < weightNeeded)
 		{
 			Activated = false;
