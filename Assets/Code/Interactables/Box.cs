@@ -12,10 +12,4 @@
             }
         }
     }
-    /*
-    protected override void UnInteract()
-    {
-        transform.parent = null;
-    }
-    */
 }
