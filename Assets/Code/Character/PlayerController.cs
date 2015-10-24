@@ -55,7 +55,20 @@ public class PlayerController : MonoBehaviour
 	private Rigidbody2D rigidBody;
 	private Animator animator;
 	private bool canJump;
-	public bool interacting;
+	public bool interacting
+	{
+		get
+		{
+			animator.SetBool("box", _interacting);
+			return _interacting;
+		}
+		set
+		{
+			_interacting = value;
+		}
+	}
+	
+	private bool _interacting;
 	
 	void Awake ()
 	{
