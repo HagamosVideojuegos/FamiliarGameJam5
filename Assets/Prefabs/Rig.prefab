@@ -270,8 +270,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 470434}
-  - 50: {fileID: 5009432}
-  - 61: {fileID: 6185290}
   - 95: {fileID: 9552534}
   m_Layer: 0
   m_Name: Rig
@@ -1153,7 +1151,7 @@ Transform:
   m_GameObject: {fileID: 192314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .0349021293, y: -4.61999989, z: 0}
-  m_LocalScale: {x: 1.24650478, y: 1.34585381, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 457750}
   m_Father: {fileID: 470434}
@@ -1166,7 +1164,7 @@ Transform:
   m_GameObject: {fileID: 134706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.119999997, y: .330000013, z: 0}
-  m_LocalScale: {x: .802243173, y: .74302274, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 469918}
   m_Father: {fileID: 0}
@@ -1312,35 +1310,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 443972}
   m_RootOrder: 0
---- !u!50 &5009432
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 134706}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &6185290
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 134706}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -.240328193}
-  serializedVersion: 2
-  m_Size: {x: 5.4000001, y: 10.0806513}
 --- !u!95 &9552534
 Animator:
   serializedVersion: 3
