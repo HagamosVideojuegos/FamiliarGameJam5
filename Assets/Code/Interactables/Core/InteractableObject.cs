@@ -6,13 +6,13 @@ public abstract class InteractableObject : MonoBehaviour
 	{
 		get
 		{
-			return (transform.parent == null) ? _interactable : true;	
+			return (transform.parent == GameManager.Instance.player.transform) ? true : _interactable;	
 		}
 	}
 	
 	public SpriteRenderer uiInteractable;
 	
-	protected bool _interactable;
+	protected bool _interactable = false;
 	protected virtual void Awake()
 	{
 		InputManager.OnInteract += HandleOnInteract;

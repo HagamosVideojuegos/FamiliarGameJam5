@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class Button : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Button : MonoBehaviour
 	public delegate void Activate(Button button);
 	public delegate void Deactivate(Button button);
 	
+	List<GameObject> weightObjects = new List<GameObject>();
 	
 	public int weightNeeded;
 	public int currentWeight;
@@ -15,20 +17,17 @@ public class Button : MonoBehaviour
 	
     void OnTriggerEnter2D(Collider2D collider)
 	{
-		var piece = collider.GetComponent<Piece>();
-		var player = collider.GetComponent<PlayerController>();
-		var box = collider.GetComponent<Box>();
+		var g = collider.gameObject;
 		
-		if(piece)
+		if(g.GetComponent<Piece>() != null || g.GetComponent<Box>() != null || g.GetComponent<PlayerController>() != null)
 		{
-			currentWeight += piece.Weight;
-		} else if (player) {
-			currentWeight += player.FullWeight;
-		} else if (box && box.GetComponent<Rigidbody2D>() != null) {
-			currentWeight += box.Weight;
+			if(!weightObjects.Find((findObject) => findObject == g))
+				weightObjects.Add(g);
 		} else {
 			return;
 		}
+		
+		CalculateWeight();
 		
 		if(!Activated && currentWeight >= weightNeeded)
 		{
@@ -40,22 +39,16 @@ public class Button : MonoBehaviour
 	
 	void OnTriggerExit2D(Collider2D collider)
 	{
-		var piece = collider.GetComponent<Piece>();
-		var player = collider.GetComponent<PlayerController>();
-		var box = collider.GetComponent<Box>();
+		var g = collider.gameObject;
 		
-		if(piece)
+		if(g.GetComponent<Piece>() != null || g.GetComponent<Box>() != null || g.GetComponent<PlayerController>() != null)
 		{
-			currentWeight -= piece.Weight;
-		} else if (player) {
-			currentWeight -= player.FullWeight;
-		} else if (box) {
-			currentWeight -= box.Weight;
+			weightObjects.Remove(g);
 		} else {
 			return;
 		}
 		
-		currentWeight = Mathf.Clamp(currentWeight, 0, int.MaxValue);
+		CalculateWeight();
 		
 		if(Activated && currentWeight < weightNeeded)
 		{
@@ -63,5 +56,28 @@ public class Button : MonoBehaviour
 			if(OnDeactivate != null)
 				OnDeactivate(this);
 		}
+	}
+	
+	private void CalculateWeight()
+	{
+		currentWeight = 0;
+		
+		foreach(GameObject go in weightObjects)
+		{
+			if(go.GetComponent<Piece>() != null)
+			{
+				currentWeight += go.GetComponent<Piece>().Weight;
+			}
+			else if (go.GetComponent<PlayerController>())
+			{
+				currentWeight += go.GetComponent<PlayerController>().FullWeight;
+			}
+			else if (go.GetComponent<Box>())
+			{
+				currentWeight += go.GetComponent<Box>().Weight;
+			}
+		}
+		
+		currentWeight = Mathf.Clamp(currentWeight, 0, int.MaxValue);
 	}
 }
