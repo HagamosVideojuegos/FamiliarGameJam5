@@ -1,4 +1,6 @@
 ﻿
+using UnityEngine;
+
 public class Lever : InteractableObjectCollider
 {
 	public static event Activate OnActivate;
@@ -12,6 +14,9 @@ public class Lever : InteractableObjectCollider
             GameManager.Instance.player.OnLeverUse(this);
             if(OnActivate != null)
                 OnActivate(this);
+            
+            transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
+            this.enabled = false;
         }
     }
 }
