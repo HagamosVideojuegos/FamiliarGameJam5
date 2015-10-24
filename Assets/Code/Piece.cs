@@ -6,7 +6,6 @@
 	public enum PieceType
 	{
 		Arm,
-		Body,
 		Head,
 		Leg
 	} 
@@ -18,17 +17,32 @@
 		switch (pieceType)
 		{
 			case PieceType.Arm:
-			GameManager.Instance.player.pieces.arms += 1;
-			break;
-			case PieceType.Body:
-			GameManager.Instance.player.pieces.body = true;
+			switch(GameManager.Instance.player.pieces.arms)
+			{
+				case 0:
+				GameManager.Instance.player.pieces.RightArm.SetActive(true);
+				break;
+				case 1:
+				GameManager.Instance.player.pieces.LeftArm.SetActive(true);
+				break;
+			}
 			break;
 			case PieceType.Head:
-			GameManager.Instance.player.pieces.head = true;
+			GameManager.Instance.player.pieces.Head.SetActive(true);
 			break;
 			case PieceType.Leg:
-			GameManager.Instance.player.pieces.legs += 1;
+			switch(GameManager.Instance.player.pieces.legs)
+			{
+				case 0:
+				GameManager.Instance.player.pieces.RightLeg.SetActive(true);
+				break;
+				case 1:
+				GameManager.Instance.player.pieces.LeftLeg.SetActive(true);
+				break;
+			}
 			break;
 		}
+		
+		Destroy(gameObject);
     }
 }
