@@ -139,36 +139,57 @@ public class PlayerController : MonoBehaviour
 			break;
 		}
 	}
-	
-	public void DeactivatePiece(PieceType piece)
+
+	/// <summary>
+	/// Deactivates the piece.
+	/// </summary>
+	/// <returns><c>true</c>, if piece was deactivated, <c>false</c> otherwise.</returns>
+	/// <param name="piece">Piece.</param>
+	public bool DeactivatePiece(PieceType piece)
 	{
 		switch(piece)
 		{
 			case PieceType.Arm:
-			switch(pieces.arms)
-			{
-				case 1:
-				pieces.RightArm.SetActive(false);
+				switch(pieces.arms)
+				{
+					case 1:
+						pieces.RightArm.SetActive(false);
+						return true;	
+						break;
+					case 2:
+						pieces.LeftArm.SetActive(false);
+						return true;
+						break;
+					default:
+						return false;
+						break;
+				}
 				break;
-				case 2:
-				pieces.LeftArm.SetActive(false);
-				break;
-			}
-			break;
 			case PieceType.Head:
-			pieces.Head.SetActive(false);
-			break;
+				if(pieces.head){
+					pieces.Head.SetActive(false);
+					return true;
+				}else{
+					return false;
+				}
+				break;
 			case PieceType.Leg:
-			switch(pieces.legs)
-			{
-				case 1:
-				pieces.RightLeg.SetActive(false);
+				switch(pieces.legs)
+				{
+					case 1:
+						pieces.RightLeg.SetActive(false);
+						return true;
+						break;
+					case 2:
+						pieces.LeftLeg.SetActive(false);
+						return true;
+						break;
+					default:
+						return false;
+						break;
+				}
 				break;
-				case 2:
-				pieces.LeftLeg.SetActive(false);
-				break;
-			}
-			break;
 		}
+		return false;
 	}
 }
