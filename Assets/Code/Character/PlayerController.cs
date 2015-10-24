@@ -62,8 +62,6 @@ public class PlayerController : MonoBehaviour
 	{
 		InputManager.OnMove += HandleMove;
 		InputManager.OnJump += HandleJump;
-		InputManager.OnPieceIn += HandlePieceIn;
-		InputManager.OnPieceOut += HandlePieceOut;
 		
 		rigidBody = GetComponent<Rigidbody2D>();
 		animator = GetComponentInChildren<Animator>();
@@ -74,8 +72,6 @@ public class PlayerController : MonoBehaviour
 	{
 		InputManager.OnMove -= HandleMove;
 		InputManager.OnJump -= HandleJump;
-		InputManager.OnPieceIn -= HandlePieceIn;
-		InputManager.OnPieceOut -= HandlePieceOut;
 	}
 	
 	void OnCollisionEnter2D(Collision2D collider)

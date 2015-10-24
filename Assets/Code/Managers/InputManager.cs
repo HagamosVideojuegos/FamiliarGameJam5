@@ -5,8 +5,6 @@ public class InputManager : Singleton<InputManager>
 	#region Events
 	public static event Move OnMove;
 	public static event Jump OnJump;
-	public static event PieceOut OnPieceOut;
-	public static event PieceIn OnPieceIn;
 	public static event Interact OnInteract;
 	public static event Interact OnInteractableSelected;
 	#endregion
@@ -14,8 +12,6 @@ public class InputManager : Singleton<InputManager>
 	#region Delegates
 	public delegate void Move(float direction);
 	public delegate void Jump();
-	public delegate void PieceOut(Piece piece);
-	public delegate void PieceIn(Piece piece);
 	public delegate void Interact(InteractableObject interactableObject);
 	public delegate void InteractableSelected(InteractableObject interactableObject);
 	#endregion
@@ -29,14 +25,10 @@ public class InputManager : Singleton<InputManager>
 		colision = Physics2D.Raycast(worldPoint, Vector2.right, 1f, LayerMask.NameToLayer("Player"), 0);
 		if(colision.collider != null)
 		{
-			var piece = colision.collider.gameObject.GetComponent<Piece>();
 			var interactable = colision.collider.gameObject.GetComponent<InteractableObject>();
 			
 			if(Input.GetMouseButtonDown(0))
-			{
-				if(piece && piece.tag.Equals("Player") && OnPieceOut != null)
-					OnPieceOut(piece);	
-					
+			{		
 				if(interactable && OnInteract != null)
 					OnInteract(interactable);
 			} else {
