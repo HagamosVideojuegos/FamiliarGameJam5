@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 480152}
   - 212: {fileID: 21207228}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 401860}
   - 212: {fileID: 21252378}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 473294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FootR
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 486350}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ForearmR
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 406540}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmL
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 483476}
   - 212: {fileID: 21262606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 452186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FootL
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 494728}
   - 212: {fileID: 21233218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 428820}
   - 212: {fileID: 21257684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 441482}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HandR
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 460586}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShinboneR
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 489102}
   - 212: {fileID: 21253576}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 441898}
   - 212: {fileID: 21202898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 417224}
   - 212: {fileID: 21255496}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 488790}
   - 212: {fileID: 21285478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 414810}
   - 95: {fileID: 9514968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rig
   m_TagString: Player
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -261,7 +261,7 @@ GameObject:
   - 50: {fileID: 5019372}
   - 114: {fileID: 11435062}
   - 61: {fileID: 6125632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 458550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmR
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -291,7 +291,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 425524}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShoulderR
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -306,7 +306,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 466058}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThighR
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -322,7 +322,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 484370}
   - 212: {fileID: 21229168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 433120}
   - 212: {fileID: 21235652}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 492774}
   - 212: {fileID: 21236568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 462558}
   - 212: {fileID: 21269550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 408114}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -400,7 +400,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 472498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShoulderL
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -416,7 +416,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 486820}
   - 212: {fileID: 21240564}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 458530}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ForearmL
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -447,7 +447,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 475194}
   - 212: {fileID: 21239586}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 448886}
   - 212: {fileID: 21283776}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 425900}
   - 212: {fileID: 21223572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 430138}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HandL
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -510,7 +510,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 479614}
   - 212: {fileID: 21274694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 410768}
   - 212: {fileID: 21267038}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -542,7 +542,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 467266}
   - 212: {fileID: 21285296}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 429276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EarR
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -572,7 +572,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 423988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Column
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -588,7 +588,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 467968}
   - 212: {fileID: 21239232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -603,7 +603,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 462852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShinboneL
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -618,7 +618,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 440790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThighL
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -633,7 +633,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 445968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torso
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -648,7 +648,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 467504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pelvis
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -663,7 +663,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 406298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EarL
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -679,7 +679,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 479284}
   - 212: {fileID: 21200462}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -694,7 +694,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 471456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Neck
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -709,7 +709,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 499166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mouth
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -728,7 +728,7 @@ GameObject:
   - 92: {fileID: 9274724}
   - 124: {fileID: 12435710}
   - 81: {fileID: 8178824}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -743,7 +743,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 486464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CenterOfGravity
   m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -1019,7 +1019,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -73.4000015, y: 20.9699993, z: 0}
+  m_LocalPosition: {x: -80.6999969, y: 25.7000008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 414810}
@@ -1622,7 +1622,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1696827713
-  m_SortingOrder: 120
+  m_SortingOrder: 150
   m_Sprite: {fileID: 21300000, guid: 912185294b2bb4d46b93d095c66157f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21233218
