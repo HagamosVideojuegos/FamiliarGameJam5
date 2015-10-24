@@ -6,7 +6,6 @@ public class Door : MonoBehaviour
 	public Vector3 movementToOpen;
 	public float time;
 	
-	public bool test;
 	private Vector3 initialPosition;
 	
 	void Awake()
@@ -22,25 +21,17 @@ public class Door : MonoBehaviour
 		Button.OnDeactivate -= HandleOnDectivate;
 	}
 	
-	void OnValidate()
-	{
-		if(test)
-			HandleOnActivate(null);
-		else
-			HandleOnDectivate(null);
-	}
-	
 	private void HandleOnActivate(Button button)
 	{
 		LeanTween.cancel(gameObject);
-		LeanTween.moveLocal(gameObject, movementToOpen, time);
+		LeanTween.moveLocal(gameObject, movementToOpen, time).setEase( LeanTweenType.easeInQuad );
 		//TODO: SFX Open
 	}
 	
 	private void HandleOnDectivate(Button button)
 	{
 		LeanTween.cancel(gameObject);
-		LeanTween.move(gameObject, initialPosition, time);
+		LeanTween.moveLocal(gameObject, initialPosition, time).setEase( LeanTweenType.easeInQuad );
 		//TODO: SFX Close 
 	}
 }
