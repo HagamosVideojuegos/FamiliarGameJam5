@@ -44,8 +44,22 @@ public class PlayerController : MonoBehaviour
 			}
 		}
 	}
+
+    public void Die()
+    {
+        animator.SetTrigger("die");
+		OnDestroy();
+		GameManager.Instance.Invoke("ResetLevel", 2f);
+    }
 	
-	public float MoveForce;
+	public void SelfDestruct()
+    {
+        animator.SetTrigger("selfDestruct");
+		OnDestroy();
+		GameManager.Instance.Invoke("ResetLevel", 2f);
+    }
+
+    public float MoveForce;
 	public float MoveOnAirForce;
 	public float JumpForce;
 	
