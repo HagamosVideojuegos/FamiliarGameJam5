@@ -155,17 +155,13 @@ public class PlayerController : MonoBehaviour
 				{
 					case 1:
 						pieces.RightArm.SetActive(false);
-						return true;	
-						break;
+						return true;
 					case 2:
 						pieces.LeftArm.SetActive(false);
 						return true;
-						break;
 					default:
 						return false;
-						break;
 				}
-				break;
 			case PieceType.Head:
 				if(pieces.head){
 					pieces.Head.SetActive(false);
@@ -173,7 +169,6 @@ public class PlayerController : MonoBehaviour
 				}else{
 					return false;
 				}
-				break;
 			case PieceType.Leg:
 				switch(pieces.legs)
 				{
@@ -181,17 +176,13 @@ public class PlayerController : MonoBehaviour
 						pieces.RightLeg.SetActive(false);
 						animator.SetInteger("legs",pieces.legs);
 						return true;
-						break;
 					case 2:
 						pieces.LeftLeg.SetActive(false);
 						animator.SetInteger("legs",pieces.legs);
 						return true;
-						break;
 					default:
 						return false;
-						break;
 				}
-				break;
 		}
 		return false;
 	}
