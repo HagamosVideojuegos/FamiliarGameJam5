@@ -44,22 +44,8 @@ public class PlayerController : MonoBehaviour
 			}
 		}
 	}
-
-    public void Die()
-    {
-        animator.SetTrigger("die");
-		OnDestroy();
-		GameManager.Instance.Invoke("ResetLevel", 2f);
-    }
 	
-	public void SelfDestruct()
-    {
-        animator.SetTrigger("selfDestruct");
-		OnDestroy();
-		GameManager.Instance.Invoke("ResetLevel", 2f);
-    }
-
-    public float MoveForce;
+	public float MoveForce;
 	public float MoveOnAirForce;
 	public float JumpForce;
 	
@@ -83,6 +69,34 @@ public class PlayerController : MonoBehaviour
 	}
 	
 	private bool _interacting;
+
+    public void Die()
+    {
+        animator.SetTrigger("die");
+		OnDestroy();
+		GameManager.Instance.Invoke("ResetLevel", 2f);
+    }
+	
+	public void SelfDestruct()
+    {
+        animator.SetTrigger("selfDestruct");
+		OnDestroy();
+		GameManager.Instance.Invoke("ResetLevel", 2f);
+    }
+	
+	public void OnLeverUse(Lever lever)
+	{
+		animator.SetTrigger("useLever");
+		interacting = true;
+		InputManager.OnMove -= HandleMove;
+		lever.Invoke("UserLever", 2f);
+	}
+	
+	public void OnLeverExit()
+	{
+		interacting = false;
+		InputManager.OnMove += HandleMove;
+	}
 	
 	void Awake ()
 	{
@@ -127,7 +141,7 @@ public class PlayerController : MonoBehaviour
 	
 	private void HandleJump()
 	{
-		if (canJump && !interacting) 
+		if (canJump && !interacting && pieces.legs == 2) 
 		{
 			rigidBody.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
 			canJump = false;
