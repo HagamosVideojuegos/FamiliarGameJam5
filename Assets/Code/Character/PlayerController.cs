@@ -50,9 +50,7 @@ public class PlayerController : MonoBehaviour
 	public float JumpForce;
 	
 	public Pieces pieces;
-	
-	[HideInInspector]
-	public int Weight;
+	public int FullWeight;
 	
 	private Rigidbody2D rigidBody;
 	private Animator animator;
