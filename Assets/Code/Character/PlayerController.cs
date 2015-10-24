@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 		InputManager.OnPieceOut += HandlePieceOut;
 		
 		rigidBody = GetComponent<Rigidbody2D>();
+		GameManager.Instance.player = this;
 	}
 	
 	void OnDestroy ()
@@ -37,6 +38,13 @@ public class PlayerController : MonoBehaviour
 	
 	private void HandleMove(float direction)
 	{
+		if(direction == 0)
+		{
+			//TODO: Trigger stay
+		} else {
+			transform.localScale = Vector3.one * direction;
+			//TODO: Trigger move
+		}
 		rigidBody.velocity = new Vector2(direction * MoveForce, rigidBody.velocity.y);
 	}
 	
