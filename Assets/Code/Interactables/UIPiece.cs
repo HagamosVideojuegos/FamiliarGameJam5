@@ -12,6 +12,9 @@ public class UIPiece : InteractableObjectUI
 			case PieceType.Arm:
 			switch(GameManager.Instance.player.pieces.arms)
 			{
+				case 0:
+				//TODO: Fail button sound
+				return;
 				case 1:
 				GameManager.Instance.player.pieces.RightArm.SetActive(false);
 				break;
@@ -26,6 +29,9 @@ public class UIPiece : InteractableObjectUI
 			case PieceType.Leg:
 			switch(GameManager.Instance.player.pieces.legs)
 			{
+				case 0:
+				//TODO: Fail button sound
+				return;
 				case 1:
 				GameManager.Instance.player.pieces.RightLeg.SetActive(false);
 				break;
@@ -37,5 +43,6 @@ public class UIPiece : InteractableObjectUI
 		}
 		GameManager.Instance.player.DeactivatePiece(piece.pieceType);
 		Instantiate(piece, GameManager.Instance.player.transform.position, new Quaternion(0, 0, 0 ,0));
+		//TODO: Button OK Sound
     }
 }
