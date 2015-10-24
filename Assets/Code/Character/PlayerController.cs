@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
 		animator.SetTrigger("useLever");
 		interacting = true;
 		InputManager.OnMove -= HandleMove;
-		lever.Invoke("UserLever", 2f);
+		lever.Invoke("UserLever", 0.7f);
 	}
 	
 	public void OnLeverExit()
