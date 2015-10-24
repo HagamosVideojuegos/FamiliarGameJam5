@@ -2,6 +2,10 @@
 
 public class InputManager : Singleton<InputManager>
 {
+	void Awake() {
+		GameObject.DontDestroyOnLoad(InputManager.Instance);
+		Debug.Log(InputManager.Instance.ToString());
+	}
 	#region Events
 	public static event Move OnMove;
 	public static event Jump OnJump;

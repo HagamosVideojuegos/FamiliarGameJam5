@@ -23,4 +23,8 @@ public class UIFunctions : MonoBehaviour {
 	public void CloseControlsDEscription(){
 		controlsDescriptionPanel.SetActive(false);
 	}
+
+	public void StartGame(){
+		Application.LoadLevel(2);
+	}
 }
