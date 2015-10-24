@@ -2,14 +2,6 @@
 {
 	public int Weight;
 	public PieceType pieceType;
-	
-	public enum PieceType
-	{
-		Arm,
-		Head,
-		Leg
-	} 
-
 
     protected override void Interact()
     {
@@ -42,7 +34,7 @@
 			}
 			break;
 		}
-		
+		GameManager.Instance.player.ActivatePiece(pieceType);
 		Destroy(gameObject);
     }
 }

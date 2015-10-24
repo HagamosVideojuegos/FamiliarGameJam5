@@ -108,11 +108,11 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 	
-	private void HandlePieceIn(Piece piece)
+	public void ActivatePiece(PieceType piece)
 	{
-		switch(piece.pieceType)
+		switch(piece)
 		{
-			case Piece.PieceType.Arm:
+			case PieceType.Arm:
 			switch(pieces.arms)
 			{
 				case 0:
@@ -123,10 +123,10 @@ public class PlayerController : MonoBehaviour
 				break;
 			}
 			break;
-			case Piece.PieceType.Head:
+			case PieceType.Head:
 			pieces.Head.SetActive(true);
 			break;
-			case Piece.PieceType.Leg:
+			case PieceType.Leg:
 			switch(pieces.arms)
 			{
 				case 0:
@@ -140,11 +140,11 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 	
-	private void HandlePieceOut(Piece piece)
+	public void DeactivatePiece(PieceType piece)
 	{
-		switch(piece.pieceType)
+		switch(piece)
 		{
-			case Piece.PieceType.Arm:
+			case PieceType.Arm:
 			switch(pieces.arms)
 			{
 				case 1:
@@ -155,10 +155,10 @@ public class PlayerController : MonoBehaviour
 				break;
 			}
 			break;
-			case Piece.PieceType.Head:
+			case PieceType.Head:
 			pieces.Head.SetActive(false);
 			break;
-			case Piece.PieceType.Leg:
+			case PieceType.Leg:
 			switch(pieces.arms)
 			{
 				case 1:
