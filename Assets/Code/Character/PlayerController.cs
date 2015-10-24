@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour
 	public float MoveForce;
 	public float JumpForce;
 	
+	[HideInInspector]
+	public int Weight;
+	
 	private Rigidbody2D rigidBody;
 	private bool canJump;
 	

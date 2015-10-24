@@ -15,11 +15,16 @@ public class Button : MonoBehaviour
 	
     void OnTriggerEnter2D(Collider2D collider)
 	{
-		Piece piece = collider.GetComponent<Piece>();
+		var piece = collider.GetComponent<Piece>();
+		var player = collider.GetComponent<PlayerController>();
 		
 		if(piece)
 		{
-			currentWeight += currentWeight;
+			currentWeight += piece.Weight;
+		} else if (player) {
+			currentWeight += player.Weight;
+		} else {
+			return;
 		}
 		
 		if(!Activated && currentWeight >= weightNeeded)
@@ -32,11 +37,16 @@ public class Button : MonoBehaviour
 	
 	void OnTriggerExit2D(Collider2D collider)
 	{
-		Piece piece = collider.GetComponent<Piece>();
+		var piece = collider.GetComponent<Piece>();
+		var player = collider.GetComponent<PlayerController>();
 		
 		if(piece)
 		{
-			currentWeight -= currentWeight;
+			currentWeight -= piece.Weight;
+		} else if (player) {
+			currentWeight -= player.Weight;
+		} else {
+			return;
 		}
 		
 		if(Activated && currentWeight <= weightNeeded)
