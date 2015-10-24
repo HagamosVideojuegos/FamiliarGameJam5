@@ -1,5 +1,5 @@
-﻿public class Box : InteractableObject
-{
+﻿public class Box : InteractableObjectCollider
+{   
     protected override void Interact()
     {
         if(isInteractable)

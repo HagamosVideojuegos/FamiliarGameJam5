@@ -2,7 +2,6 @@
 
 public abstract class InteractableObject : MonoBehaviour
 {
-	[SerializeField]
 	public bool isInteractable
 	{
 		get
@@ -11,10 +10,10 @@ public abstract class InteractableObject : MonoBehaviour
 		}
 	}
 	
-	public MonoBehaviour uiInteractable;
+	public SpriteRenderer uiInteractable;
 	
-	private bool _interactable;
-	void Awake()
+	protected bool _interactable;
+	protected virtual void Awake()
 	{
 		InputManager.OnInteract += HandleOnInteract;
 	}
@@ -22,42 +21,6 @@ public abstract class InteractableObject : MonoBehaviour
 	void OnDestroy()
 	{
 		InputManager.OnInteract -= HandleOnInteract;
-	}
-	
-	void OnCollisionEnter2D(Collision2D collider)
-	{
-		if(collider.gameObject.tag.Equals("Player"))
-		{
-			_interactable = true;
-			uiInteractable.enabled = true;
-		}
-	}
-	
-	void OnCollisionExit2D(Collider2D collider)
-	{
-		if(collider.tag.Equals("Player"))
-		{
-			_interactable = false;
-			uiInteractable.enabled = false;
-		}
-	}
-	
-	void OnTriggerEnter2D(Collider2D collider)
-	{
-		if(collider.tag.Equals("Player"))
-		{
-			_interactable = true;
-			uiInteractable.enabled = true;
-		}
-	}
-	
-	void OnTriggerExit2D(Collision2D collider)
-	{
-		if(collider.gameObject.tag.Equals("Player"))
-		{
-			_interactable = false;
-			uiInteractable.enabled = false;
-		}
 	}
 	
 	private void HandleOnInteract(InteractableObject interactableObject)
