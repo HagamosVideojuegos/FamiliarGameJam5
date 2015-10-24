@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
 	private Rigidbody2D rigidBody;
 	private Animator animator;
 	private bool canJump;
+	public bool interacting;
 	
 	void Awake ()
 	{
@@ -90,15 +91,16 @@ public class PlayerController : MonoBehaviour
 		
 		if(direction != 0)
 		{
-			transform.localScale = new Vector3(1f * Mathf.Sign(direction), 1f, 1f);
 			animator.SetBool("walkRight", (direction > 0) ? true : false);
+			if(!interacting)
+				transform.localScale = new Vector3(1f *  Mathf.Sign(direction) , 1f, 1f);
 		}
-		rigidBody.velocity = new Vector2(direction *  ((canJump) ? MoveForce : MoveOnAirForce), rigidBody.velocity.y);
+		rigidBody.velocity = new Vector2(direction *  ((canJump || !interacting) ? MoveForce : MoveOnAirForce), rigidBody.velocity.y);
 	}
 	
 	private void HandleJump()
 	{
-		if (canJump) 
+		if (canJump && !interacting) 
 		{
 			rigidBody.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
 			canJump = false;

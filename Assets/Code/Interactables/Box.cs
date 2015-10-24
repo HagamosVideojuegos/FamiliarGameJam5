@@ -4,7 +4,8 @@
     {
         if(isInteractable)
         {
-            if (transform.parent == null)
+            GameManager.Instance.player.interacting = (transform.parent == null);
+            if (GameManager.Instance.player.interacting)
             {
                 transform.parent = GameManager.Instance.player.transform;
             } else {
