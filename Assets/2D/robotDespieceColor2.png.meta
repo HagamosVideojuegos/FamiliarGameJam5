@@ -1,32 +1,34 @@
 fileFormatVersion: 2
-guid: ebfba2e0e7a899e46a2edf633e7773a8
-timeCreated: 1445637996
+guid: 912185294b2bb4d46b93d095c66157f2
+timeCreated: 1445676632
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: robotDespiece_0
-    21300002: robotDespiece_1
-    21300004: robotDespiece_2
-    21300006: robotDespiece_3
-    21300008: robotDespiece_4
-    21300010: robotDespiece_5
-    21300012: robotDespiece_6
-    21300014: robotDespiece_7
-    21300016: robotDespiece_8
-    21300018: robotDespiece_9
-    21300020: robotDespiece_10
-    21300022: robotDespiece_11
-    21300024: robotDespiece_12
-    21300026: robotDespiece_13
-    21300028: robotDespiece_14
-    21300030: robotDespiece_15
-    21300032: robotDespiece_16
-    21300034: robotDespiece_17
-    21300036: robotDespiece_18
-    21300038: robotDespiece_19
-    21300040: robotDespiece_20
-    21300042: robotDespiece_21
-    21300044: robotDespiece_22
+    21300000: robotDespieceColor2_0
+    21300002: robotDespieceColor2_1
+    21300004: robotDespieceColor2_2
+    21300006: robotDespieceColor2_3
+    21300008: robotDespieceColor2_4
+    21300010: robotDespieceColor2_5
+    21300012: robotDespieceColor2_6
+    21300014: robotDespieceColor2_7
+    21300016: robotDespieceColor2_8
+    21300018: robotDespieceColor2_9
+    21300020: robotDespieceColor2_10
+    21300022: robotDespieceColor2_11
+    21300024: robotDespieceColor2_12
+    21300026: robotDespieceColor2_13
+    21300028: robotDespieceColor2_14
+    21300030: robotDespieceColor2_15
+    21300032: robotDespieceColor2_16
+    21300034: robotDespieceColor2_17
+    21300036: robotDespieceColor2_18
+    21300038: robotDespieceColor2_19
+    21300040: robotDespieceColor2_20
+    21300042: robotDespieceColor2_21
+    21300044: robotDespieceColor2_22
+    21300046: robotDespieceColor2_23
+    21300048: robotDespieceColor2_24
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -73,7 +75,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: robotDespiece_0
+    - name: robotDespieceColor2_0
       rect:
         serializedVersion: 2
         x: 95
@@ -81,69 +83,69 @@ TextureImporter:
         width: 133
         height: 106
       alignment: 9
-      pivot: {x: .797466516, y: .191114888}
+      pivot: {x: .827956796, y: .173225835}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_1
+    - name: robotDespieceColor2_1
       rect:
         serializedVersion: 2
-        x: 427
-        y: 788
-        width: 197
-        height: 180
+        x: 421
+        y: 793
+        width: 203
+        height: 177
       alignment: 9
-      pivot: {x: .603960216, y: .154449463}
+      pivot: {x: .582155406, y: .136618406}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_2
+    - name: robotDespieceColor2_2
       rect:
         serializedVersion: 2
         x: 804
-        y: 865
-        width: 100
-        height: 103
+        y: 863
+        width: 111
+        height: 105
       alignment: 9
-      pivot: {x: .842898548, y: .13487111}
+      pivot: {x: .765822411, y: .182331771}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_3
+    - name: robotDespieceColor2_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 49
         y: 750
         width: 46
         height: 61
       alignment: 9
-      pivot: {x: .796814144, y: .885479033}
+      pivot: {x: .778888702, y: .920620263}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_4
+    - name: robotDespieceColor2_4
       rect:
         serializedVersion: 2
-        x: 212
+        x: 209
         y: 672
-        width: 96
+        width: 99
         height: 92
       alignment: 9
-      pivot: {x: .673828423, y: .359837413}
+      pivot: {x: .590709329, y: .44422248}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_5
+    - name: robotDespieceColor2_5
       rect:
         serializedVersion: 2
         x: 771
         y: 751
-        width: 61
+        width: 64
         height: 82
-      alignment: 9
-      pivot: {x: .481866568, y: .405574888}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_6
+    - name: robotDespieceColor2_6
       rect:
         serializedVersion: 2
-        x: 946
-        y: 739
-        width: 42
+        x: 944
+        y: 740
+        width: 44
         height: 48
       alignment: 9
-      pivot: {x: .183964327, y: .822620392}
+      pivot: {x: .237587675, y: .820723236}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_7
+    - name: robotDespieceColor2_7
       rect:
         serializedVersion: 2
         x: 451
@@ -151,19 +153,19 @@ TextureImporter:
         width: 33
         height: 40
       alignment: 9
-      pivot: {x: .522984385, y: .196589664}
+      pivot: {x: .499998152, y: .050988771}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_8
+    - name: robotDespieceColor2_8
       rect:
         serializedVersion: 2
         x: 600
         y: 688
-        width: 47
+        width: 48
         height: 40
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_9
+    - name: robotDespieceColor2_9
       rect:
         serializedVersion: 2
         x: 24
@@ -171,9 +173,9 @@ TextureImporter:
         width: 108
         height: 121
       alignment: 9
-      pivot: {x: .756047428, y: .856519938}
+      pivot: {x: .749450743, y: .892289102}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_10
+    - name: robotDespieceColor2_10
       rect:
         serializedVersion: 2
         x: 433
@@ -181,9 +183,9 @@ TextureImporter:
         width: 143
         height: 129
       alignment: 9
-      pivot: {x: .60055691, y: .199888721}
+      pivot: {x: .616625369, y: .301102757}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_11
+    - name: robotDespieceColor2_11
       rect:
         serializedVersion: 2
         x: 855
@@ -191,9 +193,9 @@ TextureImporter:
         width: 117
         height: 118
       alignment: 9
-      pivot: {x: .159653366, y: .790592015}
+      pivot: {x: .17105338, y: .826158404}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_12
+    - name: robotDespieceColor2_12
       rect:
         serializedVersion: 2
         x: 587
@@ -203,17 +205,27 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_13
+    - name: robotDespieceColor2_13
       rect:
         serializedVersion: 2
-        x: 212
+        x: 213
         y: 427
-        width: 81
+        width: 80
         height: 69
       alignment: 9
-      pivot: {x: .636558652, y: .756492734}
+      pivot: {x: .596216977, y: .723111808}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_14
+    - name: robotDespieceColor2_14
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 448
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: robotDespieceColor2_15
       rect:
         serializedVersion: 2
         x: 723
@@ -221,9 +233,9 @@ TextureImporter:
         width: 78
         height: 72
       alignment: 9
-      pivot: {x: .329826146, y: .715080261}
+      pivot: {x: .384868145, y: .660361409}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_15
+    - name: robotDespieceColor2_16
       rect:
         serializedVersion: 2
         x: 924
@@ -231,9 +243,9 @@ TextureImporter:
         width: 44
         height: 82
       alignment: 9
-      pivot: {x: .324024558, y: .837233365}
+      pivot: {x: .325059384, y: .844190657}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_16
+    - name: robotDespieceColor2_17
       rect:
         serializedVersion: 2
         x: 64
@@ -241,39 +253,59 @@ TextureImporter:
         width: 41
         height: 89
       alignment: 9
-      pivot: {x: .688850582, y: .823137939}
+      pivot: {x: .687739491, y: .831534028}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_17
+    - name: robotDespieceColor2_18
       rect:
         serializedVersion: 2
-        x: 202
-        y: 181
-        width: 118
-        height: 152
-      alignment: 9
-      pivot: {x: .631235421, y: .93662864}
+        x: 299
+        y: 339
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_18
+    - name: robotDespieceColor2_19
       rect:
         serializedVersion: 2
         x: 499
-        y: 268
+        y: 287
         width: 41
-        height: 97
+        height: 78
       alignment: 9
-      pivot: {x: .526977539, y: .317546725}
+      pivot: {x: .556180656, y: .0767254978}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_19
+    - name: robotDespieceColor2_20
       rect:
         serializedVersion: 2
-        x: 772
-        y: 176
-        width: 105
-        height: 152
+        x: 202
+        y: 187
+        width: 118
+        height: 146
       alignment: 9
-      pivot: {x: .373585731, y: .914796948}
+      pivot: {x: .665733218, y: .962731957}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_20
+    - name: robotDespieceColor2_21
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 96
+        width: 114
+        height: 100
+      alignment: 9
+      pivot: {x: .555581093, y: .721767604}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: robotDespieceColor2_22
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 181
+        width: 105
+        height: 147
+      alignment: 9
+      pivot: {x: .369252235, y: .956178844}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: robotDespieceColor2_23
       rect:
         serializedVersion: 2
         x: 64
@@ -281,27 +313,17 @@ TextureImporter:
         width: 97
         height: 78
       alignment: 9
-      pivot: {x: .67105037, y: .811983824}
+      pivot: {x: .679559767, y: .832759202}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_21
+    - name: robotDespieceColor2_24
       rect:
         serializedVersion: 2
-        x: 462
-        y: 99
-        width: 114
-        height: 97
-      alignment: 9
-      pivot: {x: .499999464, y: .79648757}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: robotDespiece_22
-      rect:
-        serializedVersion: 2
-        x: 848
+        x: 849
         y: 60
-        width: 97
+        width: 96
         height: 78
       alignment: 9
-      pivot: {x: .294740021, y: .797802746}
+      pivot: {x: .272823334, y: .855857372}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
