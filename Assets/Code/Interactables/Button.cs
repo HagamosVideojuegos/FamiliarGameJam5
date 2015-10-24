@@ -22,7 +22,7 @@ public class Button : MonoBehaviour
 		{
 			currentWeight += piece.Weight;
 		} else if (player) {
-			currentWeight += player.Weight;
+			currentWeight += player.FullWeight;
 		} else {
 			return;
 		}
@@ -44,7 +44,7 @@ public class Button : MonoBehaviour
 		{
 			currentWeight -= piece.Weight;
 		} else if (player) {
-			currentWeight -= player.Weight;
+			currentWeight -= player.FullWeight;
 		} else {
 			return;
 		}

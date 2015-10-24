@@ -5,7 +5,7 @@
 
     protected override void Interact()
     {
-        GameManager.Instance.player.Weight += Weight;
+        GameManager.Instance.player.FullWeight += Weight;
 		switch (pieceType)
 		{
 			case PieceType.Arm:
