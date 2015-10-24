@@ -1487,7 +1487,7 @@ MonoBehaviour:
     LeftArm: {fileID: 108086}
     RightArm: {fileID: 135496}
     Head: {fileID: 194544}
-  FullWeight: 0
+  FullWeight: 7
 --- !u!124 &12435710
 Behaviour:
   m_ObjectHideFlags: 1
