@@ -29,6 +29,7 @@ public class InputManager : Singleton<InputManager>
 			
 			if(Input.GetMouseButtonDown(0))
 			{		
+				Debug.Log(interactable.name);
 				if(interactable && OnInteract != null)
 					OnInteract(interactable);
 			} else {
