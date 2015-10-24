@@ -122,7 +122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 456902, guid: f9716afcd098d4ccdaeb356ba1f51605, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11435062, guid: f9716afcd098d4ccdaeb356ba1f51605, type: 2}
       propertyPath: MoveForce

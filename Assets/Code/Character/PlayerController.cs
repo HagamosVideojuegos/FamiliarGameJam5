@@ -127,16 +127,17 @@ public class PlayerController : MonoBehaviour
 			pieces.Head.SetActive(true);
 			break;
 			case PieceType.Leg:
-			switch(pieces.arms)
-			{
-				case 0:
-				pieces.RightLeg.SetActive(true);
+				switch(pieces.arms)
+				{
+					case 0:
+						pieces.RightLeg.SetActive(true);
+						break;
+					case 1:
+						pieces.LeftLeg.SetActive(true);
+						break;
+				}
+				animator.SetInteger("legs",pieces.legs);
 				break;
-				case 1:
-				pieces.LeftLeg.SetActive(true);
-				break;
-			}
-			break;
 		}
 	}
 
@@ -178,10 +179,12 @@ public class PlayerController : MonoBehaviour
 				{
 					case 1:
 						pieces.RightLeg.SetActive(false);
+						animator.SetInteger("legs",pieces.legs);
 						return true;
 						break;
 					case 2:
 						pieces.LeftLeg.SetActive(false);
+						animator.SetInteger("legs",pieces.legs);
 						return true;
 						break;
 					default:
