@@ -1,5 +1,7 @@
 ﻿public class Box : InteractableObjectCollider
-{   
+{
+    public int Weight;
+    
     protected override void Interact()
     {
         if(isInteractable)

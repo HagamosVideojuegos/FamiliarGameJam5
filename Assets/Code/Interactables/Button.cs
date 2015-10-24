@@ -17,12 +17,15 @@ public class Button : MonoBehaviour
 	{
 		var piece = collider.GetComponent<Piece>();
 		var player = collider.GetComponent<PlayerController>();
+		var box = collider.GetComponent<Box>();
 		
 		if(piece)
 		{
 			currentWeight += piece.Weight;
 		} else if (player) {
 			currentWeight += player.FullWeight;
+		} else if (box) {
+			currentWeight += box.Weight;
 		} else {
 			return;
 		}
@@ -39,12 +42,15 @@ public class Button : MonoBehaviour
 	{
 		var piece = collider.GetComponent<Piece>();
 		var player = collider.GetComponent<PlayerController>();
+		var box = collider.GetComponent<Box>();
 		
 		if(piece)
 		{
 			currentWeight -= piece.Weight;
 		} else if (player) {
 			currentWeight -= player.FullWeight;
+		} else if (box) {
+			currentWeight -= box.Weight;
 		} else {
 			return;
 		}
