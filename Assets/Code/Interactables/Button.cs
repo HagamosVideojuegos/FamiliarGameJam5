@@ -24,7 +24,7 @@ public class Button : MonoBehaviour
 			currentWeight += piece.Weight;
 		} else if (player) {
 			currentWeight += player.FullWeight;
-		} else if (box) {
+		} else if (box && box.GetComponent<Rigidbody2D>() != null) {
 			currentWeight += box.Weight;
 		} else {
 			return;
