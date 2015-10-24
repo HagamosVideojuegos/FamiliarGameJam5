@@ -55,7 +55,7 @@ public class Button : MonoBehaviour
 			return;
 		}
 		
-		if(Activated && currentWeight <= weightNeeded)
+		if(Activated && currentWeight < weightNeeded)
 		{
 			Activated = false;
 			if(OnDeactivate != null)
