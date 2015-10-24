@@ -5,6 +5,7 @@ public class Door : MonoBehaviour
 	public Button buttonAsociated;
 	public Vector3 movementToOpen;
 	public float time;
+	public LeanTweenType openCloseEffect;
 	
 	private Vector3 initialPosition;
 	
@@ -24,14 +25,14 @@ public class Door : MonoBehaviour
 	private void HandleOnActivate(Button button)
 	{
 		LeanTween.cancel(gameObject);
-		LeanTween.moveLocal(gameObject, movementToOpen, time).setEase( LeanTweenType.easeInQuad );
+		LeanTween.moveLocal(gameObject, movementToOpen, time).setEase( openCloseEffect );
 		//TODO: SFX Open
 	}
 	
 	private void HandleOnDectivate(Button button)
 	{
 		LeanTween.cancel(gameObject);
-		LeanTween.moveLocal(gameObject, initialPosition, time).setEase( LeanTweenType.easeInQuad );
+		LeanTween.moveLocal(gameObject, initialPosition, time).setEase( openCloseEffect );
 		//TODO: SFX Close 
 	}
 }
