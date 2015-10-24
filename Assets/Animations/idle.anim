@@ -1827,6 +1827,28 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: CenterOfGravity/Pelvis/ThighL
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -.145999998, y: .395999998, z: 0}
+        inSlope: {x: .595384598, y: 0, z: 0}
+        outSlope: {x: .595384598, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: CenterOfGravity/Torso/sprite
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: .118000001, y: -.0780000016, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: CenterOfGravity/Column
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -1856,6 +1878,12 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - path: 1117106994
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4160092276
       attribute: 1
       script: {fileID: 0}
       classID: 4
@@ -1916,6 +1944,12 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - path: 2429080668
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4218438008
       attribute: 1
       script: {fileID: 0}
       classID: 4
@@ -2370,6 +2404,90 @@ AnimationClip:
       m_PostInfinity: 2
     attribute: m_LocalPosition.z
     path: CenterOfGravity/Pelvis/ThighL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.145999998
+        inSlope: .595384598
+        outSlope: .595384598
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: CenterOfGravity/Torso/sprite
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .395999998
+        inSlope: -1.81384611
+        outSlope: -1.81384611
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: CenterOfGravity/Torso/sprite
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: CenterOfGravity/Torso/sprite
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .118000001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: CenterOfGravity/Column
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.0780000016
+        inSlope: -1.19999993
+        outSlope: -1.19999993
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: CenterOfGravity/Column
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: CenterOfGravity/Column
     classID: 4
     script: {fileID: 0}
   - curve:
