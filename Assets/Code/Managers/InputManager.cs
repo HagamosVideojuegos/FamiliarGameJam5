@@ -34,6 +34,9 @@ public class InputManager : Singleton<InputManager>
 				if(interactable && OnInteract != null)
 					OnInteract(interactable);
 			}
+			
+			if(colision.collider.GetComponent<Cab>())
+				OnInteract(interactable);
 		}
 	}
 	
