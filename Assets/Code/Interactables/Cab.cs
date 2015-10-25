@@ -12,7 +12,7 @@ public class Cab : InteractableObjectTrigger
 		{
 			GameManager.Instance.player.OnDestroy();
 			AudioManager.Instance.PlaySound(nextLevelAudio);
-			Invoke("NextLevel", 2f);
+			Invoke("NextLevel", nextLevelAudio.length);
 		} else {
 			GameManager.Instance.player.NoPiece(PieceType.Head);
 			AudioManager.Instance.PlaySound(errorLevelAudio);
