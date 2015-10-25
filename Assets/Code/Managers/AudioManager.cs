@@ -12,6 +12,8 @@ public class AudioManager : Singleton<MonoBehaviour>
 	
 	public void PlaySound(AudioClip audio)
 	{
-		GameObject.Instantiate(g).GetComponent<AudioSource>().clip = audio;
+		GameObject sound = GameObject.Instantiate(g);
+		sound.GetComponent<AudioSource>().clip = audio;
+		Destroy(sound, audio.length);
 	}
 }
