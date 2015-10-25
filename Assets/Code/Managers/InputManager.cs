@@ -24,9 +24,10 @@ public class InputManager : Singleton<InputManager>
 	void LateUpdate ()
 	{		
 		var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		colision = Physics2D.Raycast(worldPoint, Vector2.right, 1f, Physics2D.AllLayers, 0);
+		colision = Physics2D.Raycast(worldPoint, Vector2.right, 0.1f, (1 << LayerMask.NameToLayer("Default")) | ((1 << LayerMask.NameToLayer("Piece"))));
 		if(colision.collider != null)
 		{
+			Debug.Log(colision.collider.name);
 			var interactable = colision.collider.gameObject.GetComponent<InteractableObject>();
 			
 			if(Input.GetMouseButtonDown(0))
