@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11496096}
   - 61: {fileID: 6138504}
   - 50: {fileID: 5017566}
+  - 114: {fileID: 11412178}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -60,6 +61,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 9.18999958, y: 2.55999994}
+--- !u!114 &11412178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da414285de48b4b4bb15b52881648166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: {fileID: 21300000, guid: adddb9f6d92ca5a40bc9e56cfbe9b411, type: 3}
+  deactivated: {fileID: 21300000, guid: d5c607370b0ebf8478d5f5134f3aa962, type: 3}
 --- !u!114 &11496096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,6 +88,7 @@ MonoBehaviour:
   weightNeeded: -1
   currentWeight: 0
   Activated: 0
+  OneUse: 0
 --- !u!212 &21213298
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -111,6 +126,16 @@ Prefab:
       propertyPath: weightNeeded
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: activated
+      value: 
+      objectReference: {fileID: 21300000, guid: adddb9f6d92ca5a40bc9e56cfbe9b411,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: deactivated
+      value: 
+      objectReference: {fileID: 21300000, guid: d5c607370b0ebf8478d5f5134f3aa962,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 103424}
