@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
 	
 	private bool _interacting;
 	private bool dying=false;
+	private bool autodestructing=false;
 
 	//SOUNDS
 	public AudioClip dieSound;
@@ -104,12 +105,17 @@ public class PlayerController : MonoBehaviour
 	
 	public void SelfDestruct()
     {
-		if(dieSound!=null)AudioManager.Instance.PlaySound(dieSound);
-		if(autoDestructionSound!=null)AudioManager.Instance.PlaySoundDelayed(autoDestructionSound,0.33f);
+		if(!autodestructing){
+			autodestructing=true;
+			animator.SetTrigger("selfDestruct");
+			if(dieSound!=null)AudioManager.Instance.PlaySound(dieSound);
+			if(autoDestructionSound!=null)AudioManager.Instance.PlaySoundDelayed(autoDestructionSound,0.33f);
+			GameManager.Instance.Invoke("ResetLevel", 2f);
+		}
+
 		rigidBody.velocity=new Vector2(0,rigidBody.velocity.y);
-        animator.SetTrigger("selfDestruct");
+        
 		OnDestroy();
-		GameManager.Instance.Invoke("ResetLevel", 2f);
     }
 	
 	public void OnLeverUse(Lever lever)
