@@ -1918,7 +1918,7 @@ Transform:
   - {fileID: 1773354978}
   - {fileID: 1790194894}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &1053053114
 GameObject:
   m_ObjectHideFlags: 0
@@ -3036,7 +3036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonAsociated: {fileID: 0}
   leverAsicoated: {fileID: 1790194896}
-  movementToOpen: {x: .899999976, y: 18, z: 0}
+  movementToOpen: {x: 6.30000019, y: -19, z: 0}
   time: .5
   openCloseEffect: 0
 --- !u!61 &1773354976
