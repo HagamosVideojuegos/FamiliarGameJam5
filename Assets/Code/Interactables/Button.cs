@@ -68,19 +68,24 @@ public class Button : MonoBehaviour
 	{
 		currentWeight = 0;
 		
+		weightObjects.RemoveAll(item => item == null);
+		
 		foreach(GameObject go in weightObjects)
 		{
-			if(go.GetComponent<Piece>() != null)
+			if(go != null)
 			{
-				currentWeight += go.GetComponent<Piece>().Weight;
-			}
-			else if (go.GetComponent<PlayerController>())
-			{
-				currentWeight += go.GetComponent<PlayerController>().FullWeight;
-			}
-			else if (go.GetComponent<Box>())
-			{
-				currentWeight += go.GetComponent<Box>().Weight;
+				if(go.GetComponent<Piece>() != null)
+				{
+					currentWeight += go.GetComponent<Piece>().Weight;
+				}
+				else if (go.GetComponent<PlayerController>() != null)
+				{
+					currentWeight += go.GetComponent<PlayerController>().FullWeight;
+				}
+				else if (go.GetComponent<Box>() != null)
+				{
+					currentWeight += go.GetComponent<Box>().Weight;
+				}
 			}
 		}
 		
