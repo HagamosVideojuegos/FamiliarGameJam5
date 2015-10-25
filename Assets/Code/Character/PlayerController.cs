@@ -131,13 +131,13 @@ public class PlayerController : MonoBehaviour
 	
 	private void HandleMove(float direction)
 	{
-		if (pieces.legs == 0)
+		animator.SetFloat("speed", Mathf.Abs(direction));
+		
+		if (pieces.legs == 0 && direction != 0)
 		{
 			GameManager.Instance.player.NoPiece(PieceType.Leg);
 			return;
 		}
-		
-		animator.SetFloat("speed", Mathf.Abs(direction));
 		
 		if(direction != 0)
 		{
