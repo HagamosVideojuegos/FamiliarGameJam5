@@ -51,7 +51,13 @@ public class PlayerController : MonoBehaviour
 	public float JumpForce;
 	
 	public Pieces pieces;
-	public int FullWeight;
+	public int weight
+	{
+		get
+		{
+			return (pieces.arms * 1) + (pieces.legs * 2) + ((pieces.head) ? 2 : 0);
+		}
+	}
 	public BoxCollider2D PickRange;
 	public SpriteRenderer adviceSprite;
 	public SpriteRenderer adviceHead;
