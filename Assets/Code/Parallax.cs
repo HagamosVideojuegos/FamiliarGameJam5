@@ -9,7 +9,7 @@ public class Parallax : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if(fondo==null){
-			fondo=GameObject.FindObjectOfType<SpriteRenderer>("Background");
+			fondo=GameObject.Find("Background").GetComponent<SpriteRenderer>();
 		}
 		this.lastPosition=this.transform.position;
 	}
