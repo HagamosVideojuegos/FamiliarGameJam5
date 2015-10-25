@@ -853,19 +853,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477264, guid: 43dcd825ee7f4e64e806843bf23de2ef, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .349999994
+      value: .356000006
       objectReference: {fileID: 0}
     - target: {fileID: 477264, guid: 43dcd825ee7f4e64e806843bf23de2ef, type: 2}
       propertyPath: m_LocalScale.y
-      value: .428829789
+      value: .438220382
       objectReference: {fileID: 0}
     - target: {fileID: 487422, guid: 43dcd825ee7f4e64e806843bf23de2ef, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .349999994
+      value: .356000006
       objectReference: {fileID: 0}
     - target: {fileID: 487422, guid: 43dcd825ee7f4e64e806843bf23de2ef, type: 2}
       propertyPath: m_LocalScale.y
-      value: .428829789
+      value: .438220382
       objectReference: {fileID: 0}
     - target: {fileID: 11405346, guid: 43dcd825ee7f4e64e806843bf23de2ef, type: 2}
       propertyPath: OneUse

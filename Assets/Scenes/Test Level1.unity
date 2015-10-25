@@ -1286,7 +1286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cab3db064cd249fd99a2c1788366b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonAsociated: {fileID: 1745678340}
+  buttonAsociated:
+  - {fileID: 1745678340}
   leverAsicoated: {fileID: 0}
   movementToOpen: {x: -15, y: 11.5309801, z: 0}
   time: .5
@@ -2961,7 +2962,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cab3db064cd249fd99a2c1788366b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonAsociated: {fileID: 632761875}
+  buttonAsociated:
+  - {fileID: 632761875}
   leverAsicoated: {fileID: 0}
   movementToOpen: {x: 49, y: -9.31000042, z: 0}
   time: .5
@@ -3034,7 +3036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cab3db064cd249fd99a2c1788366b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonAsociated: {fileID: 0}
+  buttonAsociated:
+  - {fileID: 0}
   leverAsicoated: {fileID: 1790194896}
   movementToOpen: {x: 6.30000019, y: -19, z: 0}
   time: .5
@@ -3417,7 +3420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cab3db064cd249fd99a2c1788366b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonAsociated: {fileID: 476632532}
+  buttonAsociated:
+  - {fileID: 476632532}
   leverAsicoated: {fileID: 0}
   movementToOpen: {x: .899999976, y: 18, z: 0}
   time: .5
