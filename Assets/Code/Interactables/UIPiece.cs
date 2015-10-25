@@ -7,10 +7,13 @@ public class UIPiece : InteractableObjectUI
     protected override void Interact()
     {
         GameManager.Instance.player.FullWeight += Weight;
-		bool deactivated=GameManager.Instance.player.DeactivatePiece(piece.pieceType);
-		if(deactivated){
+		if(GameManager.Instance.player.DeactivatePiece(piece.pieceType))
+		{
 			Instantiate(piece, GameManager.Instance.player.transform.position, new Quaternion(0, 0, 0 ,0));
+			//TODO: Button OK Sound
+		} else {
+			//TODO: Button fail Sound
 		}
-		//TODO: Button OK Sound
+			
     }
 }
