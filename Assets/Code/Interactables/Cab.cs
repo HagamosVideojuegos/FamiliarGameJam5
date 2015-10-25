@@ -10,12 +10,11 @@ public class Cab : InteractableObjectTrigger
     {
         if(GameManager.Instance.player.pieces.head)
 		{
-			//TODO: SFX Next Level
+			GameManager.Instance.player.OnDestroy();
 			AudioManager.Instance.PlaySound(nextLevelAudio);
 			Invoke("NextLevel", 2f);
 		} else {
 			GameManager.Instance.player.NoPiece(PieceType.Head);
-			//TODO: SFX Error
 			AudioManager.Instance.PlaySound(errorLevelAudio);
 		}
     }

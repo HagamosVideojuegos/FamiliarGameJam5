@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour
 		GameManager.Instance.player = this;
 	}
 	
-	void OnDestroy ()
+	public void OnDestroy ()
 	{
 		InputManager.OnMove -= HandleMove;
 		InputManager.OnJump -= HandleJump;
