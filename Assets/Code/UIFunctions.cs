@@ -8,7 +8,7 @@ public class UIFunctions : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		controlsDescriptionPanel=GameObject.Find("ControlsPopUp");
-		controlsDescriptionPanel.SetActive(false);
+		if(controlsDescriptionPanel!=null)controlsDescriptionPanel.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -26,5 +26,13 @@ public class UIFunctions : MonoBehaviour {
 
 	public void StartGame(){
 		Application.LoadLevel(2);
+	}
+
+	public void GoToTwitter(string url){
+		Application.OpenURL(url);
+	}
+
+	public void AutoDestruction(){
+		GameManager.Instance.player.SelfDestruct();
 	}
 }
