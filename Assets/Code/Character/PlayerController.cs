@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
+		rigidBody.velocity=new Vector2(0,rigidBody.velocity.y);
         animator.SetTrigger("die");
 		OnDestroy();
 		GameManager.Instance.Invoke("ResetLevel", 2f);
@@ -80,6 +81,7 @@ public class PlayerController : MonoBehaviour
 	
 	public void SelfDestruct()
     {
+		rigidBody.velocity=new Vector2(0,rigidBody.velocity.y);
         animator.SetTrigger("selfDestruct");
 		OnDestroy();
 		GameManager.Instance.Invoke("ResetLevel", 2f);
