@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
 	
 	public Pieces pieces;
 	public int FullWeight;
+	public BoxCollider2D PickRange;
 	
 	private Rigidbody2D rigidBody;
 	private Animator animator;

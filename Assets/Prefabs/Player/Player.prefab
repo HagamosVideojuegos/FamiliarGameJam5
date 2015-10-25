@@ -186,6 +186,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &120960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 498970}
+  - 61: {fileID: 6168188}
+  m_Layer: 0
+  m_Name: PieceRangePick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &123546
 GameObject:
   m_ObjectHideFlags: 1
@@ -1024,6 +1040,7 @@ Transform:
   m_Children:
   - {fileID: 414810}
   - {fileID: 486534}
+  - {fileID: 498970}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &458530
@@ -1360,6 +1377,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 458530}
   m_RootOrder: 0
+--- !u!4 &498970
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 456902}
+  m_RootOrder: 2
 --- !u!4 &499166
 Transform:
   m_ObjectHideFlags: 1
@@ -1436,6 +1465,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.70000005, y: 8.69999981}
+--- !u!61 &6168188
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120960}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 12, y: 10}
 --- !u!81 &8178824
 AudioListener:
   m_ObjectHideFlags: 1
@@ -1488,6 +1530,7 @@ MonoBehaviour:
     RightArm: {fileID: 135496}
     Head: {fileID: 194544}
   FullWeight: 7
+  PickRange: {fileID: 6168188}
 --- !u!124 &12435710
 Behaviour:
   m_ObjectHideFlags: 1
