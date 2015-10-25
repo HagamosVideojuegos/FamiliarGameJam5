@@ -366,6 +366,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weight: 0
   piece: {fileID: 11458530, guid: c86f5e2898d3b2d44a5436f741f61ba7, type: 2}
+  okSound: {fileID: 8300000, guid: f58ad76f94a02f44d9d6a2772c061ef9, type: 3}
+  failSound: {fileID: 8300000, guid: 856fe2929a835404c9a9ec7d2d818674, type: 3}
 --- !u!114 &11412254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -873,6 +875,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weight: 0
   piece: {fileID: 11408432, guid: 8a8c23b192fe0ce4cb82283b5b2e0c03, type: 2}
+  okSound: {fileID: 8300000, guid: f58ad76f94a02f44d9d6a2772c061ef9, type: 3}
+  failSound: {fileID: 8300000, guid: 856fe2929a835404c9a9ec7d2d818674, type: 3}
 --- !u!114 &11490214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -898,6 +902,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weight: 0
   piece: {fileID: 11404690, guid: bd5abb41c1789a041b40613aebe01aae, type: 2}
+  okSound: {fileID: 8300000, guid: f58ad76f94a02f44d9d6a2772c061ef9, type: 3}
+  failSound: {fileID: 8300000, guid: 856fe2929a835404c9a9ec7d2d818674, type: 3}
 --- !u!114 &11495402
 MonoBehaviour:
   m_ObjectHideFlags: 1
