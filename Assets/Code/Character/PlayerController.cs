@@ -173,7 +173,7 @@ public class PlayerController : MonoBehaviour
 			pieces.Head.SetActive(true);
 			break;
 			case PieceType.Leg:
-				switch(pieces.arms)
+				switch(pieces.legs)
 				{
 					case 0:
 						pieces.RightLeg.SetActive(true);
