@@ -18,6 +18,11 @@ public class Box : InteractableObjectCollider
     {
         if(isInteractable)
         {
+            if(GameManager.Instance.player.pieces.arms < 2)
+            {
+                GameManager.Instance.player.NoPiece(PieceType.Arm);
+                return;
+            }
             GameManager.Instance.player.interacting = !GameManager.Instance.player.interacting;
             if (GameManager.Instance.player.interacting)
             {
