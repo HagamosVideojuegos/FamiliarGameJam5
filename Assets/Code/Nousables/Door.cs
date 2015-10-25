@@ -69,7 +69,7 @@ public class Door : MonoBehaviour
 				if(actives == 0)
 				{
 					LeanTween.cancel(gameObject);
-					LeanTween.moveLocal(gameObject, movementToOpen, time).setEase( openCloseEffect );
+					LeanTween.moveLocal(gameObject, initialPosition, time).setEase( openCloseEffect );
 					//TODO: SFX Open
 				}
 				break;
