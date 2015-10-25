@@ -1652,6 +1652,10 @@ MonoBehaviour:
   adviceArm: {fileID: 21298574}
   adviceLeg: {fileID: 21216506}
   adviceTime: 2
+  dieSound: {fileID: 8300000, guid: 6ea4990c21717834ba05a18f8942428b, type: 3}
+  autoDestructionSound: {fileID: 8300000, guid: 648fd4cedcc965a47bffbeb66d1347ed,
+    type: 3}
+  adviceSound: {fileID: 8300000, guid: 856fe2929a835404c9a9ec7d2d818674, type: 3}
 --- !u!114 &11469518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2382,6 +2386,18 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dieSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ea4990c21717834ba05a18f8942428b, type: 3}
+    - target: {fileID: 0}
+      propertyPath: autoDestructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 648fd4cedcc965a47bffbeb66d1347ed, type: 3}
+    - target: {fileID: 0}
+      propertyPath: adviceSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 856fe2929a835404c9a9ec7d2d818674, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 133510}

@@ -89,8 +89,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.7700005, y: 17.7399998, z: 0}
-  m_LocalScale: {x: 1.08409071, y: 2.08823895, z: 1}
+  m_LocalPosition: {x: -45.6839981, y: -22.3799992, z: 0}
+  m_LocalScale: {x: 1.31445932, y: 2.08823895, z: 1}
   m_Children:
   - {fileID: 477264}
   - {fileID: 487422}
@@ -104,8 +104,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: .356000006, z: 0}
+  m_LocalScale: {x: 1.03750002, y: .438220382, z: 1}
   m_Children: []
   m_Father: {fileID: 469590}
   m_RootOrder: 0
@@ -116,8 +116,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.60629177, y: .00478883367, z: 0}
-  m_LocalScale: {x: .969908714, y: 1, z: 1}
+  m_LocalPosition: {x: -8.60629177, y: .356000006, z: 0}
+  m_LocalScale: {x: 1.04265201, y: .438220382, z: 1}
   m_Children: []
   m_Father: {fileID: 469590}
   m_RootOrder: 1
@@ -187,10 +187,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7ce052b0a9246f3af639b2d71e6bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weightNeeded: 7
+  weightNeeded: 5
   currentWeight: 0
   Activated: 0
-  OneUse: 0
+  OneUse: 1
 --- !u!114 &11422146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,7 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cab3db064cd249fd99a2c1788366b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonAsociated: {fileID: 11405346}
+  buttonAsociated:
+  - {fileID: 11405346}
   leverAsicoated: {fileID: 0}
   movementToOpen: {x: 24, y: -12, z: 0}
   time: .5
@@ -218,7 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cab3db064cd249fd99a2c1788366b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonAsociated: {fileID: 11405346}
+  buttonAsociated:
+  - {fileID: 11405346}
   leverAsicoated: {fileID: 0}
   movementToOpen: {x: -21, y: -16, z: 0}
   time: .5
@@ -247,8 +249,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: effa272ee4cd5fa4fb5da9863ac1b58d, type: 3}
-  m_Color: {r: 1, g: .820382357, b: .0529999994, a: 1}
+  m_Sprite: {fileID: 21300000, guid: fc46e6b5761ad3d45a7ecc66cca28487, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21267814
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -273,8 +275,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: effa272ee4cd5fa4fb5da9863ac1b58d, type: 3}
-  m_Color: {r: 1, g: .820382357, b: .0529999994, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f4d6c164dbe71e74cbf4a5694cf8bf73, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21285290
 SpriteRenderer:
   m_ObjectHideFlags: 1

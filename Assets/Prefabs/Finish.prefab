@@ -127,7 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiInteractable: {fileID: 0}
-  spriteCantNextLevel: {fileID: 0}
+  nextLevelAudio: {fileID: 8300000, guid: 4d86b233c93c45c488f53e1e09068d00, type: 3}
+  errorLevelAudio: {fileID: 8300000, guid: 856fe2929a835404c9a9ec7d2d818674, type: 3}
 --- !u!212 &21201604
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -212,7 +213,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: nextLevelAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d86b233c93c45c488f53e1e09068d00, type: 3}
+    - target: {fileID: 0}
+      propertyPath: errorLevelAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 856fe2929a835404c9a9ec7d2d818674, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 159874}
