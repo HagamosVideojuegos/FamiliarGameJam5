@@ -27,7 +27,6 @@ public class InputManager : Singleton<InputManager>
 		colision = Physics2D.Raycast(worldPoint, Vector2.right, 0.1f, (1 << LayerMask.NameToLayer("Default")) | ((1 << LayerMask.NameToLayer("Piece"))));
 		if(colision.collider != null)
 		{
-			Debug.Log(colision.collider.name);
 			var interactable = colision.collider.gameObject.GetComponent<InteractableObject>();
 			
 			if(Input.GetMouseButtonDown(0))
