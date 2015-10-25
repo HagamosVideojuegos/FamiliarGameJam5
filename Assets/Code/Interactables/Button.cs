@@ -14,7 +14,7 @@ public class Button : MonoBehaviour
 	public int weightNeeded;
 	public int currentWeight;
 	public bool Activated;
-    public bool Crash;
+    public bool OneUse;
 	
     void OnTriggerEnter2D(Collider2D collider)
 	{
@@ -35,12 +35,10 @@ public class Button : MonoBehaviour
 			Activated = true;
 			if(OnActivate != null)
 				OnActivate(this);
+			
+			if (OneUse)
+				weightNeeded = -1;
 		}
-
-        if (Crash)
-        {
-            Destroy(this.gameObject);
-        }
 	}
 	
 	void OnTriggerExit2D(Collider2D collider)
