@@ -139,6 +139,20 @@ public class PlayerController : MonoBehaviour
 			animator.SetBool("grounded", false);
 		}
 	}
+
+	/// <summary>
+	/// Handles the hang.
+	/// </summary>
+	/// <param name="hang">If set to <c>true</c> hang.</param>
+	public void HandleHang(bool hang){
+		if(pieces.arms == 2){
+			if(hang){
+				animator.SetBool("hanging",true);
+			}else{
+				animator.SetBool("hanging",false);
+			}
+		}
+	}
 	
 	public void ActivatePiece(PieceType piece)
 	{
