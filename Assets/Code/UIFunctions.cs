@@ -35,4 +35,8 @@ public class UIFunctions : MonoBehaviour {
 	public void AutoDestruction(){
 		GameManager.Instance.player.SelfDestruct();
 	}
+
+	public void PlayAgain(){
+		Application.LoadLevel(0);
+	}
 }
