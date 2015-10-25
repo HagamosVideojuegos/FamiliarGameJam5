@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -52,6 +53,11 @@ public class PlayerController : MonoBehaviour
 	public Pieces pieces;
 	public int FullWeight;
 	public BoxCollider2D PickRange;
+	public SpriteRenderer adviceSprite;
+	public SpriteRenderer adviceHead;
+	public SpriteRenderer adviceArm;
+	public SpriteRenderer adviceLeg;
+	public float adviceTime;
 	
 	private Rigidbody2D rigidBody;
 	private Animator animator;
@@ -120,7 +126,10 @@ public class PlayerController : MonoBehaviour
 	private void HandleMove(float direction)
 	{
 		if (pieces.legs == 0)
+		{
+			GameManager.Instance.player.NoPiece(PieceType.Leg);
 			return;
+		}
 		
 		animator.SetFloat("speed", Mathf.Abs(direction));
 		
@@ -135,11 +144,16 @@ public class PlayerController : MonoBehaviour
 	
 	private void HandleJump()
 	{
-		if (canJump && !interacting && pieces.legs == 2) 
+		if (canJump && !interacting) 
 		{
-			rigidBody.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
-			canJump = false;
-			animator.SetBool("grounded", false);
+			if (pieces.legs < 2)
+			{
+				GameManager.Instance.player.NoPiece(PieceType.Head);
+			} else {
+				rigidBody.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+				canJump = false;
+				animator.SetBool("grounded", false);
+			}
 		}
 	}
 
@@ -234,5 +248,34 @@ public class PlayerController : MonoBehaviour
 				}
 		}
 		return false;
+	}
+	
+	public void NoPiece(PieceType piece)
+	{
+		adviceArm.enabled = false;
+		adviceLeg.enabled = false;
+		adviceHead.enabled = false;
+		StopCoroutine("piece");
+		StartCoroutine(NoPieceAsync(piece));
+	}
+	
+	private IEnumerator NoPieceAsync(PieceType piece)
+	{
+		LeanTween.scale(adviceSprite.gameObject, Vector3.one, 0.3f);
+		//TODO: SFX advice
+		switch(piece)
+		{
+			case PieceType.Arm:
+			adviceArm.enabled = true;
+			break;
+			case PieceType.Head:
+			adviceHead.enabled = true;
+			break;
+			case PieceType.Leg:
+			adviceLeg.enabled = true;
+			break;
+		}
+		yield return new WaitForSeconds(adviceTime);
+		LeanTween.scale(adviceSprite.gameObject, Vector3.zero, 0.3f);
 	}
 }
