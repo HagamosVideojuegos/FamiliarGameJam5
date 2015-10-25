@@ -35,7 +35,7 @@ public class InputManager : Singleton<InputManager>
 					OnInteract(interactable);
 			}
 			
-			if(colision.collider.GetComponent<Cab>())
+			if(colision.collider.GetComponent<Cab>() && colision.collider.IsTouchingLayers((1 << LayerMask.NameToLayer("Player")) ))
 				OnInteract(interactable);
 		}
 	}
