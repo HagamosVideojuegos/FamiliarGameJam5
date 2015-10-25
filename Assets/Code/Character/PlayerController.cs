@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour
 		{
 			if (pieces.legs < 2)
 			{
-				GameManager.Instance.player.NoPiece(PieceType.Head);
+				GameManager.Instance.player.NoPiece(PieceType.Leg);
 			} else {
 				rigidBody.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
 				canJump = false;
