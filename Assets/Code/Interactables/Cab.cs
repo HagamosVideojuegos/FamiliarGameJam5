@@ -2,7 +2,6 @@
 
 public class Cab : InteractableObjectTrigger
 {
-	public SpriteRenderer spriteCantNextLevel;
     protected override void Interact()
     {
         if(GameManager.Instance.player.pieces.head)
