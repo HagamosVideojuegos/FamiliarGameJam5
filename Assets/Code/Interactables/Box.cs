@@ -16,23 +16,20 @@ public class Box : InteractableObjectCollider
     
     protected override void Interact()
     {
-        if(isInteractable)
+        if(GameManager.Instance.player.pieces.arms < 2)
         {
-            if(GameManager.Instance.player.pieces.arms < 2)
-            {
-                GameManager.Instance.player.NoPiece(PieceType.Arm);
-                return;
-            }
-            GameManager.Instance.player.interacting = !GameManager.Instance.player.interacting;
-            if (GameManager.Instance.player.interacting)
-            {
-                transform.parent = GameManager.Instance.player.transform;
-                //Destroy(rigidBody);
-            } else {
-                transform.parent = transformParent;
-                //rigidBody = gameObject.AddComponent<Rigidbody2D>();
-                //rigidBody.isKinematic = true;
-            }
+            GameManager.Instance.player.NoPiece(PieceType.Arm);
+            return;
+        }
+        GameManager.Instance.player.interacting = !GameManager.Instance.player.interacting;
+        if (GameManager.Instance.player.interacting)
+        {
+            transform.parent = GameManager.Instance.player.transform;
+            //Destroy(rigidBody);
+        } else {
+            transform.parent = transformParent;
+            //rigidBody = gameObject.AddComponent<Rigidbody2D>();
+            //rigidBody.isKinematic = true;
         }
     }
 }

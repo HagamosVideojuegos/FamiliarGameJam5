@@ -25,7 +25,7 @@ public abstract class InteractableObject : MonoBehaviour
 	
 	private void HandleOnInteract(InteractableObject interactableObject)
 	{
-		if(interactableObject == this)
+		if(interactableObject == this && isInteractable)
 		{
 			Interact();
 		}

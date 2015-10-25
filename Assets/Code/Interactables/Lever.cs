@@ -17,6 +17,8 @@ public class Lever : InteractableObjectCollider
             
             transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
             this.enabled = false;
+        } else {
+            GameManager.Instance.player.NoPiece(PieceType.Arm);
         }
     }
 }
