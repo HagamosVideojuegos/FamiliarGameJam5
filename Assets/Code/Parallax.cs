@@ -19,7 +19,6 @@ public class Parallax : MonoBehaviour {
 		currentPosition=this.transform.position;
 		deltaPosition=lastPosition-currentPosition;
 		lastPosition=currentPosition;
-		Debug.Log(deltaPosition);
 		fondo.transform.Translate(deltaPosition * 0.1f);
 	}
 }
