@@ -7,7 +7,8 @@ public abstract class InteractableObjectTrigger : InteractableObject
 		if(collider.tag.Equals("Player"))
 		{
 			_interactable = true;
-			uiInteractable.enabled = true;
+			if(uiInteractable != null)
+				uiInteractable.enabled = true;
 		}
 	}
 	
@@ -16,7 +17,8 @@ public abstract class InteractableObjectTrigger : InteractableObject
 		if(collider.gameObject.tag.Equals("Player"))
 		{
 			_interactable = false;
-			uiInteractable.enabled = false;
+			if(uiInteractable != null)
+				uiInteractable.enabled = false;
 		}
 	}
 }
