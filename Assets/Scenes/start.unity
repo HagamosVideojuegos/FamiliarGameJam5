@@ -218,7 +218,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Deatacht Leg (Weight 2)
+  m_Text: 'Detacht Leg (Weight 2)
 
     Need 2 Legs to Jump
 
@@ -1414,11 +1414,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Deatacht Arm (Weight 1)
+  m_Text: 'Detacht Arm (Weight 1)
 
     Need 2 Arms to Hang
 
-    Need 2 Arms to Push Objects'
+    Need 2 Arms to Push Objects
+
+    Need 1 Arm to Use Levers'
 --- !u!222 &553583005
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2125,7 +2127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding:
     m_Left: 30
-    m_Right: -30
+    m_Right: 30
     m_Top: 30
     m_Bottom: 0
   m_ChildAlignment: 1
@@ -3342,7 +3344,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 16021402}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: .99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3899,7 +3901,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Deatacht Head (Weight 2)\nYou need the head \nto finish the level"
+  m_Text: "Detacht Head (Weight 2)\nYou need the head \nto finish the level"
 --- !u!222 &1779917897
 CanvasRenderer:
   m_ObjectHideFlags: 0
