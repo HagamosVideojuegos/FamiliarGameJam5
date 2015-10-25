@@ -278,7 +278,6 @@ public class PlayerController : MonoBehaviour
 		StartCoroutine(NoPieceAsync(piece));
 	}
 
-	private bool adviced=false;
 	private GameObject g;
 	private IEnumerator NoPieceAsync(PieceType piece)
 	{
