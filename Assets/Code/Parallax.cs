@@ -9,7 +9,7 @@ public class Parallax : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if(fondo==null){
-			GameObject.Find("Backgrounds");
+			GameObject.Find("Background");
 		}
 		this.lastPosition=this.transform.position;
 	}
