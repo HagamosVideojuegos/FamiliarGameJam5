@@ -9,7 +9,6 @@ public class Piece : InteractableObjectTrigger
     {
 		if(GetComponent<BoxCollider2D>().IsTouching(GameManager.Instance.player.PickRange))
 		{
-			GameManager.Instance.player.FullWeight += Weight;
 			GameManager.Instance.player.ActivatePiece(pieceType);
 			Destroy(gameObject);
 		}

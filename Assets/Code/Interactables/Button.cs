@@ -78,7 +78,7 @@ public class Button : MonoBehaviour
 				}
 				else if (go.GetComponent<PlayerController>() != null)
 				{
-					currentWeight += go.GetComponent<PlayerController>().FullWeight;
+					currentWeight += go.GetComponent<PlayerController>().weight;
 				}
 				else if (go.GetComponent<Box>() != null)
 				{
