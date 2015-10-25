@@ -82,17 +82,30 @@ public class PlayerController : MonoBehaviour
 	}
 	
 	private bool _interacting;
+	private bool dying=false;
+
+	//SOUNDS
+	public AudioClip dieSound;
+	public AudioClip autoDestructionSound;
+	public AudioClip adviceSound;
 
     public void Die()
     {
+		if(!dying){
+			dying=true;
+			if(dieSound!=null)AudioManager.Instance.PlaySound(dieSound);
+			GameManager.Instance.Invoke("ResetLevel", 2f);
+		}
 		rigidBody.velocity=new Vector2(0,rigidBody.velocity.y);
         animator.SetTrigger("die");
 		OnDestroy();
-		GameManager.Instance.Invoke("ResetLevel", 2f);
+
     }
 	
 	public void SelfDestruct()
     {
+		if(dieSound!=null)AudioManager.Instance.PlaySound(dieSound);
+		if(autoDestructionSound!=null)AudioManager.Instance.PlaySoundDelayed(autoDestructionSound,0.33f);
 		rigidBody.velocity=new Vector2(0,rigidBody.velocity.y);
         animator.SetTrigger("selfDestruct");
 		OnDestroy();
@@ -264,11 +277,15 @@ public class PlayerController : MonoBehaviour
 		StopCoroutine("piece");
 		StartCoroutine(NoPieceAsync(piece));
 	}
-	
+
+	private bool adviced=false;
+	private GameObject g;
 	private IEnumerator NoPieceAsync(PieceType piece)
 	{
+		if(g == null){
+			g = AudioManager.Instance.PlaySound(adviceSound);
+		}
 		LeanTween.scale(adviceSprite.gameObject, Vector3.one, 0.3f);
-		//TODO: SFX advice
 		switch(piece)
 		{
 			case PieceType.Arm:
